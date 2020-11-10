@@ -12,23 +12,13 @@ export default function Home({ isConnected }) {
       <main>
         <h1 className="title">My Lokaal</h1>
 
+        <img src="/town.jpeg" alt="Small Town" className="main_image" />
         <p className="description">
           Connecting neighbors and helping the local economy.
         </p>
-
-        <p>Coming Soon.</p>
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
+      <footer>Coming Soon</footer>
 
       <style jsx>{`
         .container {
@@ -38,6 +28,12 @@ export default function Home({ isConnected }) {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        .main_image {
+          width: 500px;
+          margin-top: 20px;
+          border-radius: 10px;
         }
 
         main {
