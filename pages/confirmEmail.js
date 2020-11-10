@@ -1,24 +1,9 @@
-import Head from "next/head";
-import { connectToDatabase } from "../util/mongodb";
-
-export default function Home({}) {
+export default function ConfirmEmail() {
   return (
     <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
-        <h1 className="title">My Lokaal</h1>
-
-        <img src="/town.jpeg" alt="Small Town" className="main_image" />
-        <p className="description">
-          Connecting neighbors and helping the local economy.
-        </p>
+        <h1 className="title">Confirm Your Email To Continue</h1>
       </main>
-
-      <footer>Coming Soon</footer>
 
       <style jsx>{`
         .container {
@@ -30,36 +15,11 @@ export default function Home({}) {
           align-items: center;
         }
 
-        .main_image {
-          width: 500px;
-          margin-top: 20px;
-          border-radius: 10px;
-        }
-
         main {
           padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
           justify-content: center;
           align-items: center;
         }
@@ -83,21 +43,15 @@ export default function Home({}) {
         .title {
           margin: 0;
           line-height: 1.15;
-          font-size: 4rem;
+          font-size: 35px;
         }
 
-        .title,
-        .description {
+        .title {
           text-align: center;
         }
 
         .subtitle {
           font-size: 2rem;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
         }
 
         code {
@@ -160,31 +114,6 @@ export default function Home({}) {
           }
         }
       `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   );
-}
-
-export async function getServerSideProps(context) {
-  const { client } = await connectToDatabase();
-
-  // const isConnected = await client.isConnected(); // Returns true or false
-
-  return {
-    props: {},
-  };
 }
