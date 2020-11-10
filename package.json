@@ -10,7 +10,8 @@
     "mongodb": "^3.5.9",
     "next": "latest",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "realm-web": "^1.0.0"
   },
   "license": "MIT"
 }

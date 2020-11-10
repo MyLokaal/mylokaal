@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Link from "next/link";
+import RealmApp, { useRealmApp } from "../realm/realm-app";
 import { connectToDatabase } from "../util/mongodb";
 
 export default function Home({}) {
@@ -8,6 +10,10 @@ export default function Home({}) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      {/* <Link href="/auth/login-screen">
+        <a>Log In</a>
+      </Link> */}
 
       <main>
         <h1 className="title">My Lokaal</h1>
@@ -19,7 +25,6 @@ export default function Home({}) {
       </main>
 
       <footer>Coming Soon</footer>
-
       <style jsx>{`
         .container {
           min-height: 100vh;
